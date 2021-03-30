@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Mar 23 10:36:55 2021
+# Process ID: 14016
+# Current directory: C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.runs/div_gen_1_synth_1
+# Command line: vivado.exe -log div_gen_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source div_gen_1.tcl
+# Log file: C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.runs/div_gen_1_synth_1/div_gen_1.vds
+# Journal file: C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.runs/div_gen_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source div_gen_1.tcl -notrace
