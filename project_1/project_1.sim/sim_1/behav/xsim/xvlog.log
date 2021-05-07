@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/ambient_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ambient_calc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/depth_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module depth_calc
+INFO: [VRFC 10-2458] undeclared symbol numerator, assumed default net type wire [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/depth_calc.v:93]
+INFO: [VRFC 10-2458] undeclared symbol denominator, assumed default net type wire [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/depth_calc.v:94]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module full_compare
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/peak_removal.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module peak_removal
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/single_compare.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_compare
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb

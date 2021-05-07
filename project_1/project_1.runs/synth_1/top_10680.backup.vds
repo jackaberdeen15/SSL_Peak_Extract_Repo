@@ -1,0 +1,262 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Apr 27 13:07:09 2021
+# Process ID: 10680
+# Current directory: C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.runs/synth_1/top.vds
+# Journal file: C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7k160tffg676-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Device 21-403] Loading part xc7k160tffg676-3
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14240
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1015.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/top.v:23]
+	Parameter bin_width bound to: 16 - type: integer 
+	Parameter bin_num bound to: 1024 - type: integer 
+	Parameter histogram_size bound to: 16384 - type: integer 
+	Parameter index_width bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ambient_calc' [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/ambient_calc.v:23]
+	Parameter bin_width bound to: 16 - type: integer 
+	Parameter bin_num bound to: 1024 - type: integer 
+	Parameter ambient_bin_num bound to: 64 - type: integer 
+	Parameter histogram_width bound to: 16384 - type: integer 
+	Parameter count_width bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ambient_calc' (1#1) [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/ambient_calc.v:23]
+INFO: [Synth 8-6157] synthesizing module 'full_compare' [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:23]
+	Parameter bin_width bound to: 16 - type: integer 
+	Parameter bin_num bound to: 1024 - type: integer 
+	Parameter histogram_width bound to: 16384 - type: integer 
+	Parameter index_width bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'single_compare' [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/single_compare.v:23]
+	Parameter bin_size bound to: 16 - type: integer 
+	Parameter index_width bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'single_compare' (2#1) [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/single_compare.v:23]
+WARNING: [Synth 8-324] index 256 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 256 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 257 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 257 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 258 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 258 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 259 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 259 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 260 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 260 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 261 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 261 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 262 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 262 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 263 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 263 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 264 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 264 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 265 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 265 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 266 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 266 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 267 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 267 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 268 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 268 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 269 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 269 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 270 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 270 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 271 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 271 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 272 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 272 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 273 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 273 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 274 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 274 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 275 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 275 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 276 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 276 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 277 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 277 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 278 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 278 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 279 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 279 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 280 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 280 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 281 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 281 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 282 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 282 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 283 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 283 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 284 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 284 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 285 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 285 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 286 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 286 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 287 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 287 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 288 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 288 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 289 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 289 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 290 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 290 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 291 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 291 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 292 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 292 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 293 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 293 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 294 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 294 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 295 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 295 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 296 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 296 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 297 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 297 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 298 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 298 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 299 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 299 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 300 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 300 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 301 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 301 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 302 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 302 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 303 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 303 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 304 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 304 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+WARNING: [Synth 8-324] index 305 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:86]
+WARNING: [Synth 8-324] index 305 out of range [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:87]
+INFO: [Common 17-14] Message 'Synth 8-324' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6157] synthesizing module 'cordic_0' [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.runs/synth_1/.Xil/Vivado-10680-DESKTOP-1GSCE32/realtime/cordic_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'cordic_0' (3#1) [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.runs/synth_1/.Xil/Vivado-10680-DESKTOP-1GSCE32/realtime/cordic_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'full_compare' (4#1) [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:23]
+INFO: [Synth 8-6157] synthesizing module 'peak_removal' [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/peak_removal.v:23]
+	Parameter bin_width bound to: 16 - type: integer 
+	Parameter bin_num bound to: 1024 - type: integer 
+	Parameter histogram_width bound to: 16384 - type: integer 
+	Parameter index_width bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'peak_removal' (5#1) [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/peak_removal.v:23]
+INFO: [Synth 8-6157] synthesizing module 'depth_calc' [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/depth_calc.v:23]
+	Parameter bin_size bound to: 16 - type: integer 
+	Parameter bin_num bound to: 1024 - type: integer 
+	Parameter index_width bound to: 10 - type: integer 
+	Parameter count_width bound to: 32 - type: integer 
+	Parameter histogram_width bound to: 16384 - type: integer 
+	Parameter uint32 bound to: 32 - type: integer 
+	Parameter ufix8_8 bound to: 8 - type: integer 
+	Parameter bin_peak_width bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'div_gen_0' [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.runs/synth_1/.Xil/Vivado-10680-DESKTOP-1GSCE32/realtime/div_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'div_gen_0' (6#1) [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.runs/synth_1/.Xil/Vivado-10680-DESKTOP-1GSCE32/realtime/div_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'depth_calc' (7#1) [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/depth_calc.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'top' (8#1) [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1122.438 ; gain = 106.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1122.438 ; gain = 106.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1122.438 ; gain = 106.672
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1122.438 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.gen/sources_1/ip/cordic_0/cordic_0/cordic_0_in_context.xdc] for cell 'extract_peak/square_root_photon_count'
+Finished Parsing XDC File [c:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.gen/sources_1/ip/cordic_0/cordic_0/cordic_0_in_context.xdc] for cell 'extract_peak/square_root_photon_count'
+Parsing XDC File [c:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.gen/sources_1/ip/cordic_0/cordic_0/cordic_0_in_context.xdc] for cell 'extract_second_peak/square_root_photon_count'
+Finished Parsing XDC File [c:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.gen/sources_1/ip/cordic_0/cordic_0/cordic_0_in_context.xdc] for cell 'extract_second_peak/square_root_photon_count'
+Parsing XDC File [c:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.gen/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'depth_extraction/divide'
+Finished Parsing XDC File [c:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.gen/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'depth_extraction/divide'
+Parsing XDC File [c:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.gen/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'second_depth_extraction/divide'
+Finished Parsing XDC File [c:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.gen/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'second_depth_extraction/divide'
+Parsing XDC File [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.164 . Memory (MB): peak = 1492.813 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.411 . Memory (MB): peak = 1492.813 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 1495.035 ; gain = 479.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tffg676-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 1495.035 ; gain = 479.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for extract_peak/square_root_photon_count. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for extract_second_peak/square_root_photon_count. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for depth_extraction/divide. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for second_depth_extraction/divide. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 1495.035 ; gain = 479.270
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'ambient_value_reg' [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/ambient_calc.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_buffer_reg' [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:260]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_buffer_reg' [C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v:260]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:45 ; elapsed = 00:02:54 . Memory (MB): peak = 3576.973 ; gain = 2561.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	  64 Input   22 Bit       Adders := 1     
+	   5 Input   19 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 6     
+	   2 Input   10 Bit       Adders := 5     
+	   3 Input    3 Bit       Adders := 2     
++---Registers : 
+	               80 Bit    Registers := 2     
+	               32 Bit    Registers := 2     
+	               19 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   2 Input   80 Bit        Muxes := 8     
+	   2 Input   16 Bit        Muxes := 2046  
+	   2 Input   10 Bit        Muxes := 2047  
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------

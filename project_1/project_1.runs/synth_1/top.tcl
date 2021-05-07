@@ -89,6 +89,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/ambient_calc.v
   C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/depth_calc.v
   C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/full_compare.v
+  C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/peak_removal.v
   C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/single_compare.v
   C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sources_1/new/top.v
 }

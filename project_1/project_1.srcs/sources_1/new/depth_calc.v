@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module depth_calc#(parameter bin_size=16, bin_num=64, count_width=32, histogram_width=bin_num*bin_size, uint32=32, ufix8_8=8, index_width=6, bin_peak_width=5)(
+module depth_calc#(parameter bin_size=16, bin_num=1024, index_width=10, count_width=32, histogram_width=bin_num*bin_size, uint32=32, ufix8_8=8, bin_peak_width=5)(
     input wire [histogram_width-1:0] histogram, //[15:0] refers to min bin and [79:64] would be max depending on peak width
     input wire [index_width-1:0] bin_index,
     input wire clk,

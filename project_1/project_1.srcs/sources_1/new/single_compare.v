@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module single_compare#(parameter bin_size=16, index_width=6)(
+module single_compare#(parameter bin_size=16, index_width=10)(
     input wire [bin_size-1:0] bin1_value, 
     input wire [index_width-1:0] bin1_index,
     input wire [bin_size-1:0] bin2_value,

@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ambient_calc #(parameter bin_width=16, bin_num=64, ambient_bin_num=64, histogram_width=bin_num*bin_width, count_width=24)(
+module ambient_calc #(parameter bin_width=16, bin_num=1024, ambient_bin_num=64, histogram_width=bin_num*bin_width, count_width=24)(
     input wire [histogram_width-1:0] histogram,
     input wire clk, //clock
     output wire [bin_width-1:0] ambient  
@@ -99,9 +99,10 @@ module ambient_calc #(parameter bin_width=16, bin_num=64, ambient_bin_num=64, hi
       .m_axis_dout_tdata(divider_output)            // output wire [39 : 0] m_axis_dout_tdata
     );*/
     
-    always @(total_photons)
+    always @(total_photons or dividend_tvalid)
         if(dividend_tvalid)
-            ambient_value=total_photons>>6;
+            ambient_value<=total_photons>>6;
+        //else ambient_value=ambient_value;        
         /*if(divider_output_valid)
              ambient_value=divider_output[31:16];*/
              

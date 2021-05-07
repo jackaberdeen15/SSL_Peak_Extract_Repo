@@ -20,21 +20,25 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module top #(parameter bin_width=16, bin_num=64, histogram_size=bin_num*bin_width, index_width=6)(
+module top #(parameter bin_width=16, bin_num=1024, histogram_size=bin_num*bin_width, index_width=10)(
     input [histogram_size-1:0] histogram,
     input clk,
     input reset,
     output wire [31:0] depth_integer,
     output wire [7:0] depth_fraction,
+    output wire [31:0] second_depth_integer,
+    output wire [7:0] second_depth_fraction,
     output wire [index_width-1:0] peak_bin,
+    output wire [index_width-1:0] second_peak_bin,
     output wire [bin_width-1:0] ambient,
     //output wire [histogram_size-1:0] upd_histogram,
-    output wire NaN_flag
+    output wire NaN1_flag,
+    output wire NaN2_flag
     );
     
     wire [bin_width-1:0] ambient_level;
-    //wire [histogram_size-1:0] updated_histogram;
-    //wire [index_width-1:0] peak_bin;
+    wire [histogram_size-1:0] updated_histogram;
+    //wire NaN1_flag,NaN2_flag;
     
     ambient_calc calc_ambient(
         .histogram(histogram),
@@ -56,7 +60,23 @@ module top #(parameter bin_width=16, bin_num=64, histogram_size=bin_num*bin_widt
         .median(ambient_level),
         .clk(clk),
         .max_bin_index(peak_bin),
-        .NaN_flag(NaN_flag)
+        .NaN_flag(NaN1_flag)
+        );
+        
+    //removes first peak from histogram
+    peak_removal update_histogram(
+        .histogram(histogram), // uint_16 bin values
+        .peak_index(peak_bin),
+        .clk(clk), //clock
+        .new_histogram(updated_histogram)
+    );
+    
+    full_compare extract_second_peak(
+        .histogram(updated_histogram),
+        .median(ambient_level),
+        .clk(clk),
+        .max_bin_index(second_peak_bin),
+        .NaN_flag(NaN2_flag)
         );
     
     //calculates the depth bin and outputs it as a float    
@@ -68,8 +88,17 @@ module top #(parameter bin_width=16, bin_num=64, histogram_size=bin_num*bin_widt
         .depth_bin_fraction(depth_fraction)
         );   
     
+    depth_calc second_depth_extraction(
+        .histogram(histogram),
+        .bin_index(second_peak_bin),
+        .clk(clk),
+        .depth_bin_integer(second_depth_integer),
+        .depth_bin_fraction(second_depth_fraction)
+        );  
+    
     //assign bin=peak_bin;
     assign ambient=ambient_level;
+    //assign NaN_flag=NaN1_flag|NaN2_flag;
     //assign upd_histogram=updated_histogram;
     
 endmodule

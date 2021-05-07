@@ -1,3 +1,4 @@
 Vivado Simulator 2020.2
 Time resolution is 1 ps
-$finish called at time : 19 us : File "C:/Users/u39jm15/AppData/Roaming/Xilinx/Vivado/Projects/SSL_Peak_Extract_Repo/project_1/project_1.srcs/sim_1/new/top_tb.v" Line 172
+FATAL_ERROR: Vivado Simulator kernel has discovered an exceptional condition from which it cannot recover. Process will terminate. For technical support on this issue, please open a WebCase with this project attached at http://www.xilinx.com/support.
+Time: 0 ps  Iteration: 1

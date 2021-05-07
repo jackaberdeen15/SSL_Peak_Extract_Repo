@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module full_compare#(parameter bin_width=16, bin_num=64, histogram_width=bin_num*bin_width, index_width=6)(
+module full_compare#(parameter bin_width=16, bin_num=1024, histogram_width=bin_num*bin_width, index_width=10)(
     input wire [histogram_width-1:0] histogram, // uint_16 bin values
     input wire [bin_width-1:0] median, 
     input wire clk, //clock
@@ -28,8 +28,6 @@ module full_compare#(parameter bin_width=16, bin_num=64, histogram_width=bin_num
     output wire NaN_flag
     );
     
-    wire [bin_width-1:0] winner_bins_values_1024[(bin_num>>1)-1:0];
-    wire [index_width-1:0] winner_bins_indexs_1024[(bin_num>>1)-1:0];
     wire tvalid;
     wire tready;
     wire output_valid;
@@ -72,31 +70,107 @@ module full_compare#(parameter bin_width=16, bin_num=64, histogram_width=bin_num
       .m_axis_dout_tdata(square_root)              // output wire [15 : 0] m_axis_dout_tdata
     );
     
-    wire [bin_width-1:0] winner_bins_values_32[(bin_num>>1)-1:0];
-    wire [index_width-1:0] winner_bins_indexs_32[(bin_num>>1)-1:0];
+    wire [bin_width-1:0] winner_bins_values_512[512-1:0];
+    wire [index_width-1:0] winner_bins_indexs_512[512-1:0];
     
     genvar i;
-    // 32 comparisons
+    // 512 comparisons
     generate
-        for(i=0; i<bin_num;i=i+2) begin : gen_compare_32
+        for(i=0; i<bin_num;i=i+2) begin : gen_compare_512
         
         single_compare c1(
                         histogram[i*bin_width +:bin_width],
                         i[index_width-1:0],
                         histogram[(i+1)*bin_width +:bin_width],
                         i[index_width-1:0]+1'd1,
+                        winner_bins_values_256[i>>1],
+                        winner_bins_indexs_256[i>>1]
+                        );
+        end 
+    endgenerate
+    
+    wire [bin_width-1:0] winner_bins_values_256[256-1:0];
+    wire [index_width-1:0] winner_bins_indexs_256[256-1:0];
+    
+    //genvar i;
+    // 256 comparisons
+    generate
+        for(i=0; i<512;i=i+2) begin : gen_compare_256
+        
+        single_compare c1(
+                        winner_bins_values_512[i],
+                        winner_bins_indexs_512[i],
+                        winner_bins_values_512[i+1],
+                        winner_bins_indexs_512[i+1],
+                        winner_bins_values_256[i>>1],
+                        winner_bins_indexs_256[i>>1]
+                        );
+        end 
+    endgenerate
+    
+    wire [bin_width-1:0] winner_bins_values_128[128-1:0];
+    wire [index_width-1:0] winner_bins_indexs_128[128-1:0];
+    
+    //genvar i;
+    // 128 comparisons
+    generate
+        for(i=0; i<256;i=i+2) begin : gen_compare_128
+        
+        single_compare c1(
+                        winner_bins_values_256[i],
+                        winner_bins_indexs_256[i],
+                        winner_bins_values_256[i+1],
+                        winner_bins_indexs_256[i+1],
+                        winner_bins_values_128[i>>1],
+                        winner_bins_indexs_128[i>>1]
+                        );
+        end 
+    endgenerate
+    
+    wire [bin_width-1:0] winner_bins_values_64[64-1:0];
+    wire [index_width-1:0] winner_bins_indexs_64[64-1:0];
+    
+    //genvar i;
+    // 64 comparisons
+    generate
+        for(i=0; i<128;i=i+2) begin : gen_compare_64
+        
+        single_compare c1(
+                        winner_bins_values_128[i],
+                        winner_bins_indexs_128[i],
+                        winner_bins_values_128[i+1],
+                        winner_bins_indexs_128[i+1],
+                        winner_bins_values_64[i>>1],
+                        winner_bins_indexs_64[i>>1]
+                        );
+        end 
+    endgenerate
+    
+    wire [bin_width-1:0] winner_bins_values_32[32-1:0];
+    wire [index_width-1:0] winner_bins_indexs_32[32-1:0];
+    
+    //genvar i;
+    // 32 comparisons
+    generate
+        for(i=0; i<64;i=i+2) begin : gen_compare_32
+        
+        single_compare c1(
+                        winner_bins_values_64[i],
+                        winner_bins_indexs_64[i],
+                        winner_bins_values_64[i+1],
+                        winner_bins_indexs_64[i+1],
                         winner_bins_values_32[i>>1],
                         winner_bins_indexs_32[i>>1]
                         );
         end 
     endgenerate
     
-    wire [bin_width-1:0] winner_bins_values_16[(bin_num>>2)-1:0];
-    wire [index_width-1:0] winner_bins_indexs_16[(bin_num>>2)-1:0];
+    wire [bin_width-1:0] winner_bins_values_16[16-1:0];
+    wire [index_width-1:0] winner_bins_indexs_16[16-1:0];
     
     // 16 comparisons
     generate
-        for(i=0; i<bin_num>>1;i=i+2) begin : gen_compare_16
+        for(i=0; i<32;i=i+2) begin : gen_compare_16
         
         single_compare c1(
                         winner_bins_values_32[i],
@@ -109,12 +183,12 @@ module full_compare#(parameter bin_width=16, bin_num=64, histogram_width=bin_num
         end 
     endgenerate
     
-    wire [bin_width-1:0] winner_bins_values_8[(bin_num>>3)-1:0];
-    wire [index_width-1:0] winner_bins_indexs_8[(bin_num>>3)-1:0];
+    wire [bin_width-1:0] winner_bins_values_8[8-1:0];
+    wire [index_width-1:0] winner_bins_indexs_8[8-1:0];
     
     // 8 comparisons
     generate
-        for(i=0; i<bin_num>>2;i=i+2) begin : gen_compare_8
+        for(i=0; i<16;i=i+2) begin : gen_compare_8
         
         single_compare c1(
                         winner_bins_values_16[i],
@@ -127,12 +201,12 @@ module full_compare#(parameter bin_width=16, bin_num=64, histogram_width=bin_num
         end 
     endgenerate
     
-    wire [bin_width-1:0] winner_bins_values_4[(bin_num>>4)-1:0];
-    wire [index_width-1:0] winner_bins_indexs_4[(bin_num>>4)-1:0];
+    wire [bin_width-1:0] winner_bins_values_4[4-1:0];
+    wire [index_width-1:0] winner_bins_indexs_4[4-1:0];
     
     // 4 comparisons
     generate
-        for(i=0; i<bin_num>>3;i=i+2) begin : gen_compare_4
+        for(i=0; i<8;i=i+2) begin : gen_compare_4
         
         single_compare c1(
                         winner_bins_values_8[i],
@@ -145,12 +219,12 @@ module full_compare#(parameter bin_width=16, bin_num=64, histogram_width=bin_num
         end 
     endgenerate
     
-    wire [bin_width-1:0] winner_bins_values_2[(bin_num>>5)-1:0];
-    wire [index_width-1:0] winner_bins_indexs_2[(bin_num>>5)-1:0];
+    wire [bin_width-1:0] winner_bins_values_2[2-1:0];
+    wire [index_width-1:0] winner_bins_indexs_2[2-1:0];
     
     // 2 comparisons
     generate
-        for(i=0; i<bin_num>>4;i=i+2) begin : gen_compare_2
+        for(i=0; i<4;i=i+2) begin : gen_compare_2
         
         single_compare c1(
                         winner_bins_values_4[i],
@@ -183,11 +257,9 @@ module full_compare#(parameter bin_width=16, bin_num=64, histogram_width=bin_num
         NaN1=(photon_count_buffer>=median+4*(square_root_buffer))?0:1;
         
         if(output_valid&~NaN_flag) begin
-            
-            bin_buffer=winner_bins_indexs_1;
-            
+            bin_buffer<=winner_bins_indexs_1;
         end
-        //aresetn=0;
+        //else bin_buffer=bin_buffer;
     end
     
     

@@ -1,0 +1,17 @@
+Exception at PC 0x00007FFF5942C55D
+Attemped to read address 0xFFFFFFFF1985BE34
+Printing stacktrace...
+
+[0] (iki_vlog_xorArrayGate+0x271d) [0x00007FFF5942C55D]
+[1] (iki_vlog_xorArrayGate+0x271d) [0x00007FFF5942C55D]
+[2] (iki_vlog_handle_force_release_and_driver_resolution+0xe5) [0x00007FFF5942D425]
+[3] (vlog_ep_nsr_tree_complex+0x5c) [0x00007FFF594500DC]
+[4] (xsi_trace_all+0x658a) [0x00007FFF5945E2BA]
+[5] (xsi_trace_all+0xcd1d) [0x00007FFF59464A4D]
+[6] (xsi_trace_all+0xbd4d) [0x00007FFF59463A7D]
+[7] (xsi_trace_all+0xa8dc) [0x00007FFF5946260C]
+[8] (xsi_trace_all+0xa449) [0x00007FFF59462179]
+[9] (beginthreadex+0x142) [0x00007FF826C410B2]
+[10] (BaseThreadInitThunk+0x14) [0x00007FF8278F7C24]
+[11] (RtlUserThreadStart+0x21) [0x00007FF828EAD721]
+Done

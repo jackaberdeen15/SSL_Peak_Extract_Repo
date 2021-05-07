@@ -25,18 +25,18 @@ module top_tb(
     );
     
     //inputs
-    reg [64*16-1:0] histogram;
+    reg [1024*16-1:0] histogram;
     reg clk;
     reg reset;
     parameter CLOCK_PERIOD=10;
     
     //outputs
-    wire [5:0] peak_bin;
+    wire [9:0] peak_bin,second_peak_bin;
     wire [15:0] ambient;
     //wire [64*16-1:0] upd_histogram;
-    wire NaN_flag;
-    wire [31:0] depth_integer;
-    wire [7:0] depth_fraction;
+    wire NaN1_flag,NaN2_flag;
+    wire [31:0] depth_integer,second_depth_integer;
+    wire [7:0] depth_fraction,second_depth_fraction;
     
     
     //unit under test
@@ -45,11 +45,15 @@ module top_tb(
         .reset(reset),
         .clk(clk),
         .peak_bin(peak_bin),
+        .second_peak_bin(second_peak_bin),
         .ambient(ambient),
         //.upd_histogram(upd_histogram),
-        .NaN_flag(NaN_flag),
+        .NaN1_flag(NaN1_flag),
+        .NaN2_flag(NaN2_flag),
         .depth_integer(depth_integer),
-        .depth_fraction(depth_fraction)
+        .depth_fraction(depth_fraction),
+        .second_depth_integer(second_depth_integer),
+        .second_depth_fraction(second_depth_fraction)
         );
     
     initial begin
